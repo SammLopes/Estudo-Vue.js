@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Vue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contador Vue.js</h1>
+    </header>
+    <section id="events">
+        <h2>Eventos em Ação</h2>
+        <input type="text" v-model="inter">
+        <button v-on:click="add(inter)">Add</button>
+        <button v-on:click="reduce(inter)">Remove</button>
+        <p>Resultado: {{ counter }}</p>
+        <input type="text" v-on:input="setName($event, 'Gestor')">
+        <p>Seu Nome: {{ name }}</p>
+    </section>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
