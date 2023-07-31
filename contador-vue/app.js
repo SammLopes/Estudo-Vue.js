@@ -4,6 +4,7 @@ const app = Vue.createApp({
             counter: 0,
             inter: 0,
             name: '',
+            confirmarName: '',
         }
     },
 
@@ -28,6 +29,21 @@ const app = Vue.createApp({
                 this.name = event.target.value + " " + lastName;
             }    
         },
+
+        setInter(event, num){
+            if(!isNaN(num)){
+                this.num = event.target.value;
+            }
+        },
+
+        envioForm(){
+            //event.preventDefault() usado apra imperdir o reload da pagina logo o envio do formulário
+            alert('Dados enviados com sucesso!!!');
+        },
+        
+        confirmaNome(){
+            this.confirmarName = this.name;
+        }
     }
 });
 app.mount('#events');

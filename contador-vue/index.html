@@ -12,12 +12,17 @@
     </header>
     <section id="events">
         <h2>Eventos em Ação</h2>
-        <input type="text" v-model="inter">
-        <button v-on:click="add(inter)">Add</button>
-        <button v-on:click="reduce(inter)">Remove</button>
+        <input type="text" v-model="inter" v-on:input="setInter">
+        <button v-on:click="add(inter)">Add <span>{{ inter }}</span></button>
+        <button v-on:click="reduce(inter)">Remove <span>{{ inter }}</span></button>
+        <p v-once>Numero de Inicio: {{ counter }}</p>
         <p>Resultado: {{ counter }}</p>
-        <input type="text" v-on:input="setName($event, 'Gestor')">
-        <p>Seu Nome: {{ name }}</p>
+        <input type="text" v-on:input="setName($event, 'Gestor')" v-on:keyup.enter="confirmaNome">
+        <p>Seu Nome: {{ confirmarName }}</p>
+        <form v-on:submit.prevent="envioForm">
+            <input type="text">
+            <button>Enviar</button>
+        </form>
     </section>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
