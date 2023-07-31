@@ -78,6 +78,7 @@ section p{
 
 #saida{
     margin-left: 232px;
+    margin-bottom: 20px;
 }
 
 section input{
@@ -85,6 +86,21 @@ section input{
     border: 1px solid var(--cor5);
     border-radius: 5px;
     color: var(--cor3);
+}
+
+section form{
+    margin-left: 231px;
+}
+
+section form input{
+    font: inherit;
+}
+
+section form button{
+    margin: 10px;
+    margin-left:0;
+    border-radius: 10px;
+    background-color: var(--cor4);
 }
 
 section input:focus{

@@ -13,8 +13,9 @@
       <section id="events">
         <h2>Ações em Eventos</h2>
         <input type="number" id="inter">
-        <button id="add">Aumentar</button>
-        <button id="reduce">Diminuir</button>
+        <button id="add">Aumentar <span id="ent">0</span>
+        </button>
+        <button id="reduce">Diminuir <span id="out">0</span></button>
         <p>
             Resultado:
              <span id="res"></span>
@@ -22,6 +23,12 @@
 
         <p>Seu Nome: <span id="entrada"></span></p>
         <input type="text"  id="saida"> 
+
+        <form id="form">
+            <input type="text" id="formEntrada">
+            <br>
+            <button id="enviar">Enviar</button>
+        </form>
     </section>
     <script src="index.js"></script>
 </body>
