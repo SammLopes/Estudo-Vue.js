@@ -11,7 +11,6 @@ const btnEnviar = document.getElementById('enviar');
 const intEnt = document.getElementById('ent');
 const intOut = document.getElementById('out');
 
-
 function intCampo1(){
     intEnt.textContent = inter.value;
     intOut.textContent = inter.value;
@@ -27,6 +26,7 @@ function intCampo3(){
 
 function updateDisplay(){
     resultado.textContent = count;
+    estatico.textContent = count;
 }
 
 function add(event){
@@ -60,10 +60,14 @@ function enviarForms(event){
     alert('Seus dados foram enviados');
 }
 
+function forms(event){
+    event.keyCode == 13
+    event.preventDefault();
+    alert('Seus dados foram enviados');
+}
 
-
-
-btnEnviar.addEventListener('click', enviarForms);
+dadosEntrada.addEventListener('keydowm', forms)
+btnEnviar.addEventListener('click', forms);
 btnAdd.addEventListener('click', add);
 btnRem.addEventListener('click', reduce);
 entrada.addEventListener('input', atualizaCampo);
